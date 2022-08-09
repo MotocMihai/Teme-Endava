@@ -1,8 +1,8 @@
-body{
+#first-box{
     margin: 30px;
     padding: 10px;
     border: 1px solid #000000;
-    width: 25%;
+    width: 25%; 
 }
 
 h1{
@@ -10,15 +10,15 @@ h1{
     border-bottom: 8px dotted purple;
 }
 
-h3{
+h3.web-developer{
     color:grey;
 }
 
-h2{
+h2.contact{
     font-style: italic;
 }
 
-ul{
+ul.jane{
     border: 3px solid purple;
     padding: 20px; 
 }
@@ -33,5 +33,58 @@ li{
 }
 
 #web{
-    color:rgb(214, 180, 118);
+    color:rgb(197, 101, 38);
+}
+
+#second-box{
+    background-color: lightgray; 
+    height: 50%;
+    margin:10px;
+    padding:10px;
+    border-radius: 5px;
+    
+}
+
+.container{
+    display: flex;
+    align-content: center;
+    align-items: center;  
+}
+
+.container-chris{
+    display: flex;
+    flex-direction: row;
+    background-color: darkred;
+    height: 150px;
+    justify-content: space-between;  
+}
+
+.chris-img{
+   height: 150px;
+   float:right
+}
+
+.poza-chris{
+    float: right;
+}
+
+.main-chris{
+    background-color: red;
+    border-radius: 15px;
+    border: solid #000000;   
+}
+
+ul.chris {
+    color: white;
+    list-style: none;
+    padding: 0;
+}
+
+#email-chris{
+    text-decoration: none;
+    color: white;
+}
+
+.chris-footer{
+    padding:10px
 }
