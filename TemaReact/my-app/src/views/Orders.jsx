@@ -23,6 +23,7 @@ const useStyles = makeStyles(() => ({
     tableContainer: {
         margin: '16px',
         width: 'auto',
+        float: 'left'
         
     },
     tableId:{
@@ -35,7 +36,10 @@ const useStyles = makeStyles(() => ({
         
         borderTop: 5 ,
         borderColor: 'red'
-    }
+    },
+    OrderButton:{
+        backgroundcolor: "blue",
+    },
     
 }));
 
@@ -59,7 +63,7 @@ export const Orders = () => {
     console.log(orders)
 
     const handleOrder =()=>{
-        
+        alert("order placed");
     }
 
     return (
@@ -72,7 +76,7 @@ export const Orders = () => {
                         <TableCell>Description</TableCell>
                         <TableCell>Thumbnail</TableCell>
                         <TableCell>Price</TableCell>
-                        <TableCell>Order</TableCell>
+                        <TableCell className={classes.OrderButton}>Order</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -86,7 +90,7 @@ export const Orders = () => {
                                     <TableCell className={classes.TableRow}>{description}</TableCell>
                                     <TableCell className={classes.TableRow}>{thumbnail}</TableCell>
                                     <TableCell className={classes.TableRow}>{price}$</TableCell>
-                                    <TableCell><Button onClick={handleOrder}>Order</Button></TableCell>
+                                    <TableCell><Button onClick={handleOrder} className={classes.OrderButton}>Order</Button></TableCell>
                                 </TableRow>
                             )
                         })

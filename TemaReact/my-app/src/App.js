@@ -5,6 +5,7 @@ import {Input} from "@material-ui/core";
 import { Orders } from "./views/Orders";
 import { blue } from '@material-ui/core/colors';
 import {makeStyles} from "@material-ui/core";
+import{AppHeader} from "./Components/AppHeader"
 
 
 function App() {
@@ -18,8 +19,11 @@ function App() {
  
   return (
       <div className="App">
+          <AppHeader/>
+          
           <Welcome name={value}/>
           <Input onChange={handleChangeInput}/>
+          
           <Orders/>
       
       </div>
