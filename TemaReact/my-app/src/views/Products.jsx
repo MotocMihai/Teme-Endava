@@ -44,7 +44,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 
-export const Orders = () => {
+export const Products = () => {
     const [orders, setOrders] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const classes = useStyles();

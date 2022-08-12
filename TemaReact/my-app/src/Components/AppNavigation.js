@@ -21,11 +21,11 @@ export default function AppNavigation() {
     const classes = useStyles();
    
     return (
-        <React.Fragment>
+        
             <nav>
-            <NavLink exact to="/grapes">Grapes</NavLink>
+           
                 <p className={classes.paragraph}>123</p>
             </nav>
-        </React.Fragment>
+        
     )
 }
