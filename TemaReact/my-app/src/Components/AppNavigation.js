@@ -2,30 +2,34 @@ import { red } from '@material-ui/core/colors';
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
+import {Link} from "react-router-dom"
 
 
-const useStyles=makeStyles(()=>({
-    paragraph:{
-       width:'100%',
-       height:'100%',
-       float: 'buttom'
-
-       
-    },
-}))
 
 export default function AppNavigation() {
  
 
     
-    const classes = useStyles();
-   
+    
     return (
         
-            <nav>
-           
-                <p className={classes.paragraph}>123</p>
-            </nav>
-        
+        <div className="navbox">
+        <nav>
+            <ul className="navboxitems">
+                <li>
+                    <Link to="/">Home</Link>
+                </li>
+                <li>
+                    <Link to="/welcome">Welcome</Link>
+                </li>
+                <li>
+                <Link to= "/products">Products</Link>
+                </li>
+                <li>
+                    <Link to="/orders">Orders</Link>
+                </li>
+            </ul>
+        </nav>
+        </div>
     )
 }

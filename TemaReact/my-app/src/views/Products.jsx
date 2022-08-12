@@ -44,7 +44,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 
-export const Products = () => {
+export const Products = ({handleClick}) => {
     const [orders, setOrders] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const classes = useStyles();
@@ -62,9 +62,8 @@ export const Products = () => {
     }, [orders])
     console.log(orders)
 
-    const handleOrder =()=>{
-        alert("order placed");
-    }
+    
+    const[cart,setCart]=useState([]);
 
     return (
         <TableContainer component={Paper} className={classes.tableContainer}>
@@ -83,6 +82,14 @@ export const Products = () => {
                     {
                         orders?.products.map((item) => {
                             const {id, title, description,thumbnail,price} = item;
+                            
+                            
+
+                            const handleOrder =(item)=>{
+                                cart.push(item);
+                                console.log(cart);
+                                
+                            }
                             return (
                                 <TableRow key={id} className={classes.TableRow}>
                                     <TableCell className={classes.tableId}>{id}</TableCell>
@@ -90,7 +97,7 @@ export const Products = () => {
                                     <TableCell className={classes.TableRow}>{description}</TableCell>
                                     <TableCell className={classes.TableRow}>{thumbnail}</TableCell>
                                     <TableCell className={classes.TableRow}>{price}$</TableCell>
-                                    <TableCell><Button onClick={handleOrder} className={classes.OrderButton}>Order</Button></TableCell>
+                                    <TableCell><Button onClick={handleOrder} className={classes.OrderButton}>Add to Cart</Button></TableCell>
                                 </TableRow>
                             )
                         })

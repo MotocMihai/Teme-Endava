@@ -10,7 +10,7 @@ const useStyles=makeStyles(()=>({
        
     },
     Applogo:{
-        width: '20%',
+        width: '10%',
         height: '20%',
         float: 'left'
     }

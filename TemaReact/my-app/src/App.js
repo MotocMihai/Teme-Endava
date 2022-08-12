@@ -1,60 +1,34 @@
 import './App.css';
 import {Welcome} from "./Components/Welcome";
 import {useState} from "react";
-import {Input} from "@material-ui/core";
+import {CardActionArea, Input} from "@material-ui/core";
 import { Products } from "./views/Products";
 import { blue } from '@material-ui/core/colors';
 import {makeStyles} from "@material-ui/core";
 import{AppHeader} from "./Components/AppHeader"
 import {BrowserRouter as Router, Switch, Route, Link, Routes} from "react-router-dom";
+import {Orders} from "../src/Components/Orders"
 
 
 
 
 function App() {
+    const[cart,setCart]=useState([]);
+
+const handleClick=(item) => {
+    if(CardActionArea.indexOf(item)!== -1) return;
+    setCart([...cart,item]) ;
+};
   
-
-
- 
   return (
     <Router>
-        
-        <div className="navbox">
-            <nav>
-                <ul className="navboxitems">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/welcome">Welcome</Link>
-                    </li>
-                    <li>
-                    <Link to= "/products">Products</Link>
-                    </li>
-                    <li>
-                        <Link to="/orders">Orders</Link>
-                    </li>
-                </ul>
-            </nav>
-
-            <Routes>
-                <Route path="/">
-
-                </Route>
-                <Route path="/welcome" element={<Welcome/>}>
-                      
-                </Route>
-                <Route path ="/products" element={<Products/>}>
-                   
-                </Route>
-                
-                <Route path ="/orders" ></Route>
-                
+        <AppHeader/>
+          <Routes>
+                <Route path="/"></Route>
+                <Route path="/welcome" element={<Welcome/>}></Route>
+                <Route path ="/products" element={<Products handleClick={handleClick}/>}></Route>
+                <Route path ="/orders" element={<Orders />} ></Route> 
             </Routes>
-        </div>      
-          
-       
-      
     </Router>
   );
 }
