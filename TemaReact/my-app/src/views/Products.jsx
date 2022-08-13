@@ -88,6 +88,7 @@ export const Products = ({handleClick}) => {
                             const handleOrder =(item)=>{
                                 cart.push(item);
                                 console.log(cart);
+                                alert("feature comming soon")
                                 
                             }
                             return (
