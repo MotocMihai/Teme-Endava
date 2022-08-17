@@ -62,9 +62,9 @@ export const Welcome = () => {
         </div>
         <div>
             <h2>Datele Tale</h2>
-            <p>{name.nume}</p>
-            <p>{name.prenume}</p>
-            <p>{name.email}</p>
+            <p>Numele tau :{name.nume}</p>
+            <p>Prenumele tau:{name.prenume}</p>
+            <p>Email : {name.email}</p>
         </div>
       </>
     );

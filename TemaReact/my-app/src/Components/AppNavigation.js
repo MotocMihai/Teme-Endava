@@ -27,7 +27,7 @@ export default function AppNavigation() {
                 <Link to= "/products">Products</Link>
                 </li>
                 <li>
-                    <Link to="/orders">Orders</Link>
+                    <Link to="/admin" >Admin</Link>
                 </li>
             </ul>
         </nav>
