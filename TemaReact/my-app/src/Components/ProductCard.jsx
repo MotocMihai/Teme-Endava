@@ -9,7 +9,6 @@ const ProductCard = ({products})=>{
         <Link to ={`${products.id}`}>
             <div>{products.title}
             </div>
-            <div>{products.id}</div>
         </Link>
 
         </div>
