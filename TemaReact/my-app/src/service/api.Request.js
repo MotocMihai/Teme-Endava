@@ -15,7 +15,7 @@ export const retrieveProduct = async (id) => {
   };
   
   export const createProduct = async (payload) => {
-    const response = await fetch(`https://dummyjson.com/products`, {
+    const response = await fetch(`https://dummyjson.com/products/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
